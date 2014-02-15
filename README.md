@@ -35,16 +35,30 @@ Type java Server port# debug in the command line
 
 The following is how the program works:
 1.The server generates a safe prime, generates a 1024 bit random prime q, using probablePrime method of BigInteger class calculates its probability
+
 2. The server sends p to the client using base 64 encoding
+
 3. A primitive root of g is found
+
 4. The server sends g to the client using base 64 encoding, which the Client decodes
+
 5. The server and Client each produce random 1025 bit integers
+
 6. The server computes yb = g^b using fast modular exponentiation
+
 7. The server sends yb to client using base 64 encoding
+
 8. The client computes ya = g^a using fast modular exponentiation 
+
 9. The client sends ya to the Server
+
 10. The server computes ya^b using fast modular exponentiaition, yielding the Diffie-Hellman key
+
 11. The server obtains the MD5 hash of the key to obtain the 128 bit shared key for AES
+
 encryption/decryption
+
 12. The client computes yb^a using fast modular exponentiation
-12. The client obtains the MD5 hash of the key to obtain the 128 bit shared key for AES encryption/decryption
+
+13. The client obtains the MD5 hash of the key to obtain the 128 bit shared key for AES encryption/decryption
+
