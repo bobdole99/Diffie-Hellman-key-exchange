@@ -58,6 +58,7 @@ The following is how the program works:
 11. The server obtains the MD5 hash of the key to obtain the 128 bit shared key for AES
 
 encryption/decryption
+
 12. The client computes yb^a using fast modular exponentiation
 
 13. The client obtains the MD5 hash of the key to obtain the 128 bit shared key for AES encryption/decryption
