@@ -34,6 +34,7 @@ Type java Server port# debug in the command line
 
 
 The following is how the program works:
+
 1.The server generates a safe prime, generates a 1024 bit random prime q, using probablePrime method of BigInteger class calculates its probability
 
 2. The server sends p to the client using base 64 encoding
